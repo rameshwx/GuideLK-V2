@@ -1,0 +1,66 @@
+{
+  "appTitle": "GuideLK",
+  "mapAttribution": "© OpenStreetMap contributors · © OpenMapTiles",
+  "homeTitle": "Discover Sri Lanka",
+  "tripsTitle": "My Trips",
+  "bookingsTitle": "Bookings",
+  "settingsTitle": "Settings",
+  "loadingMap": "Preparing offline map…",
+  "mapLoadFailure": "Offline tiles could not be loaded. Ensure sri_lanka.mbtiles is bundled.",
+  "activeTripLabel": "Active trip: {tripName}",
+  "activeTripLabel@": {
+    "placeholders": {
+      "tripName": {
+        "type": "String"
+      }
+    }
+  },
+  "addToTrip": "Add to trip",
+  "addedToTrip": "{item} added to your active trip",
+  "addedToTrip@": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "noActiveTrip": "Select or create an active trip to get started.",
+  "noStayStops": "No partner stays attached to this trip yet.",
+  "unknownStay": "Partner stay",
+  "unknownPoi": "Point of interest",
+  "markAsBooked": "Mark as booked",
+  "checkInLabel": "Check-in",
+  "checkOutLabel": "Check-out",
+  "updateStayDates": "Update stay dates",
+  "noTripsYet": "Create a trip or add a recommended route to get started.",
+  "newTripDialogTitle": "Create a custom trip",
+  "tripNameLabel": "Trip name",
+  "requiredField": "This field is required",
+  "pickDatesCta": "Pick dates",
+  "cancelCta": "Cancel",
+  "createCta": "Create",
+  "createTripCta": "New trip",
+  "setActiveCta": "Set active",
+  "archiveCta": "Archive",
+  "deleteCta": "Delete",
+  "noStopsMessage": "No stops yet. Add places from the map to build your itinerary.",
+  "tripStatusDraft": "Draft",
+  "tripStatusActive": "Active",
+  "tripStatusArchived": "Archived",
+  "stopStatusPlanned": "Planned",
+  "stopStatusVisited": "Visited",
+  "stopStatusSkipped": "Skipped",
+  "settingsIntro": "Configure partner integrations and offline behaviour.",
+  "bookingImportToggle": "Enable Booking.com import",
+  "bookingImportDescription": "Allow GuideLK to import stays using your Booking.com data portability export.",
+  "bookingImportScopeHeader": "Access duration",
+  "scopeOneTime": "One-time access",
+  "scopeOneTimeDesc": "Use a single export URL provided by the traveller.",
+  "scopeContinuous": "Continuous (180 days)",
+  "scopeContinuousDesc": "Requires Booking.com continuous DMA scope refreshed daily.",
+  "bookingPortabilityUrlLabel": "Booking.com portability URL",
+  "settingsSavedMessage": "Settings saved",
+  "saveSettingsCta": "Save changes",
+  "offlineDataSubtitle": "Offline data",
+  "offlineDataDescription": "Attractions, partner stays and trips are cached locally using encrypted Hive boxes. Data refreshes whenever connectivity is available."
+}

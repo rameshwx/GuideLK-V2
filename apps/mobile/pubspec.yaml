@@ -1,0 +1,42 @@
+name: guidelk_mobile
+description: >-
+  GuideLK v2 mobile application for Android and iOS. Provides offline-first trip planning
+  with Sri Lanka only maps backed by flutter_map and MBTiles.
+publish_to: 'none'
+version: 0.1.0+1
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_map: ^6.1.0
+  flutter_map_mbtiles: ^1.0.0
+  flutter_map_marker_cluster: ^1.1.1
+  flutter_riverpod: ^2.5.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  intl: ^0.19.0
+  latlong2: ^0.9.0
+  path_provider: ^2.1.3
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.19.5
+  firebase_messaging: ^14.7.10
+  collection: ^1.18.0
+  uuid: ^4.4.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  riverpod_lint: ^2.3.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/tiles/
