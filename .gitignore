@@ -1,0 +1,23 @@
+# Flutter
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.packages
+**/ios/Pods/
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node / web artifacts
+apps/admin_web/build/
+
+# IDE
+.vscode/
+.idea/
