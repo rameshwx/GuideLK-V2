@@ -23,7 +23,7 @@ class Settings(BaseSettings):
         if self.sqlalchemy_database_uri:
             return self.sqlalchemy_database_uri
         return (
-            f"mysql+pymysql://{self.mysql_user}:{self.mysql_password}@{self.mysql_host}:"
+            f"mysql+mysqldb://{self.mysql_user}:{self.mysql_password}@{self.mysql_host}:"
             f"{self.mysql_port}/{self.mysql_db}?charset=utf8mb4"
         )
 

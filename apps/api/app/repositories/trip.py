@@ -122,7 +122,7 @@ class TripRepository:
             poi_id=payload.poi_id,
             stay_id=payload.stay_id,
             day_index=payload.day_index,
-            sort=payload.sort if payload.sort is not None else index,
+            sort=payload.sort if payload.sort else index,
             status=payload.status,
         )
 

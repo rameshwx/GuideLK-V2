@@ -1,10 +1,8 @@
 # GuideLK Admin Web
 
-Flutter web admin console served from `/guidelkv2/admin/` via hash routing. The application now
-ships the full MVP surface: user management, attractions CRUD with a Sri Lanka constrained map,
-partner stay onboarding, localization tooling, system configuration (tiles/upload settings &
-feature flags), and a news stub ready for future API wiring. Sample data is backed by Riverpod
-state notifiers so the UI behaves like the production workflow without touching the API yet.
+Flutter web admin console served from `/guidelkv2/admin/` via hash routing. The starter dashboard
+already includes a Sri Lanka bounded map using an external XYZ tiles provider and placeholder
+modules for the MVP scope.
 
 ## Development
 
