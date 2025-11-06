@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^guidelkv2/api/(.*)$ http://127.0.0.1:8001/$1 [P,L]
+ProxyPassReverse /guidelkv2/api/ http://127.0.0.1:8001/
