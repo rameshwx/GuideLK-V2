@@ -31,7 +31,6 @@ class PartnerPropertyRepository:
         return self.db.get(PartnerProperty, property_id)
 
     def create(self, payload: PropertyCreate) -> PartnerProperty:
-        dialect = self.db.bind.dialect.name if self.db.bind else None
         prop = PartnerProperty(
             name=payload.name,
             address=payload.address,
@@ -41,7 +40,7 @@ class PartnerPropertyRepository:
             is_published=payload.is_published,
             latitude=payload.latitude,
             longitude=payload.longitude,
-            geom=SpatialPointMixin.build_point(payload.longitude, payload.latitude, dialect),
+            geom=SpatialPointMixin.build_point(payload.longitude, payload.latitude),
         )
         self.db.add(prop)
         self.db.commit()
@@ -64,10 +63,7 @@ class PartnerPropertyRepository:
         if payload.latitude is not None and payload.longitude is not None:
             prop.latitude = payload.latitude
             prop.longitude = payload.longitude
-            dialect = self.db.bind.dialect.name if self.db.bind else None
-            prop.geom = SpatialPointMixin.build_point(
-                payload.longitude, payload.latitude, dialect
-            )
+            prop.geom = SpatialPointMixin.build_point(payload.longitude, payload.latitude)
         self.db.add(prop)
         self.db.commit()
         self.db.refresh(prop)

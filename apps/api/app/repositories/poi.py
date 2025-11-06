@@ -31,7 +31,6 @@ class PointOfInterestRepository:
         return self.db.get(PointOfInterest, poi_id)
 
     def create(self, payload: POICreate) -> PointOfInterest:
-        dialect = self.db.bind.dialect.name if self.db.bind else None
         poi = PointOfInterest(
             name=payload.name,
             category=payload.category,
@@ -40,7 +39,7 @@ class PointOfInterestRepository:
             is_published=payload.is_published,
             latitude=payload.latitude,
             longitude=payload.longitude,
-            geom=SpatialPointMixin.build_point(payload.longitude, payload.latitude, dialect),
+            geom=SpatialPointMixin.build_point(payload.longitude, payload.latitude),
         )
         self.db.add(poi)
         self.db.commit()
@@ -61,10 +60,7 @@ class PointOfInterestRepository:
         if payload.latitude is not None and payload.longitude is not None:
             poi.latitude = payload.latitude
             poi.longitude = payload.longitude
-            dialect = self.db.bind.dialect.name if self.db.bind else None
-            poi.geom = SpatialPointMixin.build_point(
-                payload.longitude, payload.latitude, dialect
-            )
+            poi.geom = SpatialPointMixin.build_point(payload.longitude, payload.latitude)
         self.db.add(poi)
         self.db.commit()
         self.db.refresh(poi)
