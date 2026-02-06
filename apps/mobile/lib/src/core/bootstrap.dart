@@ -24,7 +24,7 @@ class HiveKeys {
 
 /// Firebase configuration expected by the mobile application.
 const firebaseOptions = FirebaseOptions(
-  apiKey: 'AIzaSyDew-GtXxHFDLWQhVWKvMETXBVsECoAA2Q',
+  apiKey: 'AIzaSyDew-FIREBASE-API-KEY',
   appId: '1:819709172713:web:659b786487d72622210978',
   messagingSenderId: '819709172713',
   projectId: 'guidelk-d1393',
